@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PRECTICE</title>
+    <style>
+        body{
+            height: 2000px;
+        }
+    </style>
+</head>
+<body>
+         <img  id="box"  src="./Image/girl_login.png"  hieght="400px" width="400px">
+        <h1>Hello! Girl</h1>
+        <!-- <a href="https://google.com" id="anchor">click here</a> -->
+       <button id="btn1">Google</button>
+       <button id="btn2">Close</button>
+
+        <form>
+            <input type="text" id="myInput">
+        </form>
+         <script>
+                //  window.addEventListener('keydown', checkkey);
+                //  function checkkey(event){
+                //     console.log(event.key);
+                //  }  
+                // window.addEventListener('wheel', function(event){
+                //      if(event.deltaY<0){
+                //           console.log("Scrolling up");
+                //      }
+                //      else if(event.deltaY>0){
+                //         console.log("Scrolling dow");
+                //      }
+                // });
+                // let x=document.getElementById("myInput");
+                // x.addEventListener('focus', myFocusFunction);
+                // x.addEventListener('blur', myBlurFunction);
+                // x.addEventListener('change', function(){
+                //     console.log(this.value);
+                // // });
+                // x.addEventListener('input', function(){
+                //     console.log(this.value);
+                // });
+                // function  myFocusFunction() {
+                //       x.style.background ="yellow ";
+                // }
+                // function myBlurFunction(){
+                //     x.style.background= "white";
+                // }
+                // let x=document.getElementById("anchor" );
+                // x.addEventListener('click', function(e){
+                //     console.log("Link clicked");
+                // });
+                let btn1=document.getElementById("btn1");
+               let btn2=document.getElementById("btn2");
+               let url="https://google.com";
+               let win;
+                let features="hight:400px,width:400px";
+                 btn1.addEventListener('click', function(){
+                    win= window.open(url,'google', features);
+
+                 });
+                // win.close();
+                btn2.addEventListener('click',function(){
+                        win.close();
+                });
+
+
+         </script>
+</body>
+</html>

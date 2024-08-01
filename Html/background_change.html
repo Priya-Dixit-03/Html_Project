@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Background Changer</title>
+    <style>
+        body{
+            margin: 0px;
+            padding: 20px, 100px;
+
+        }
+        h1{
+            text-align: center;
+            text-decoration: underline;
+        }
+        p{
+            font-size: 28px;
+            text-align: justify;
+        }
+        .btn{
+            width: 20px;
+            height: 20px;
+            display: inline-block;
+            border: solid grey 2px;
+            border-radius: 50% ;
+            cursor: pointer;
+
+        }
+        #white{
+               background-color: aliceblue;
+        }
+        #violet{
+              background-color: violet;
+        }    
+        #black{
+            background-color: black;
+        }
+        #aqua{
+      background-color: aqua;
+        }
+        #color-switcher{
+            text-align: right;
+        }
+    </style>
+  </head> 
+  <body>
+    <div id="color-switcher">
+        <span class="btn" id="white" onclick="changeBG('#f6f6f6')"></span>
+        <span class="btn" id="aqua" onclick="changeBG('#7fffd4')"></span>
+        <span class="btn" id="violet" onclick="changeBG('#ce9aff')"></span>
+        <span class="btn" id="black" onclick="changeBG('#000000')"></span>
+    </div>
+    <h1 class="text">Just it</h1>
+    <img src="./Image/bg_image.jpg" alt="" width="400px" hieght="500px" />
+    <p class="text">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Et, optio!
+      Impedit dolore ipsum ipsa fugiat explicabo unde, nisi quasi vel placeat
+      laborum repellendus! Magni, quam quibusdam praesentium rerum esse nam.
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempora autem,
+      ut suscipit eligendi officia aut. Voluptates amet ratione totam blanditiis
+      quam necessitatibus nulla culpa animi nobis sunt, nesciunt error
+      inventore.
+    </p>
+    <script>
+        function changeBG(color){
+            document.body.style.backgroundColor=color;
+            let txt=document.getElementsByClassName("text");
+            if(color=="#000000"){
+                  for(let elm of txt){
+                    elm.style.color="white";
+
+                  }
+            }
+            else{
+                for(let elm of txt){
+                    elm.style.color="black";
+
+                  }
+            }
+        }
+    </script>
+  </body>
+</html>
